@@ -7,9 +7,6 @@ export const ScreenOnlyIPhoneX = styled(SmallScreenIPhoneX)`
   width: 100%;
   min-width: 276px;
   height: 100%;
-  @media (min-width: ${`${phoneSurrondToScreenOnlySwitch}px`}) {
-    display: none;
-  }
 `
 
 export const IPhoneXDevice = styled('div')`
@@ -38,12 +35,6 @@ export const IPhoneXDevice = styled('div')`
     border-radius: 61px;
     background: black;
     z-index: 1;
-  }
-`
-
-export const IPhoneXDisplayNoneForSmallDevices = styled(IPhoneXDevice)`
-  @media (max-width: ${`${phoneSurrondToScreenOnlySwitch - 1}px`}) {
-    display: none;
   }
 `
 

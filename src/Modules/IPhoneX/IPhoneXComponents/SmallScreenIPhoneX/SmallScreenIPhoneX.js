@@ -12,13 +12,20 @@ const SmallScreenIPhoneX = ({
   toolbarTitle,
   className,
   toolbar,
+  toolbarWrapper,
+  screenWrapper,
 }) => (
   <div className={className}>
-    <IPhoneXScreen>
+    <IPhoneXScreen className={screenWrapper}>
       <IPhoneXStatusBar />
-      {toolbar ? <IPhoneXToolbar centerChildren={toolbarTitle} /> : null}
+      {toolbar && (
+        <IPhoneXToolbar
+          centerChildren={toolbarTitle}
+          className={toolbarWrapper}
+        />
+      )}
       {children}
-      {keyboard ? <IPhoneXKeyboard /> : null}
+      {keyboard && <IPhoneXKeyboard />}
     </IPhoneXScreen>
     {/* </IPhoneXThinDevice> */}
   </div>

@@ -1,14 +1,6 @@
 import styled from '@emotion/styled'
 import IPhoneX from '../../IPhoneX/IPhoneX'
 
-export const laptopPhoneSwitchScreenWidth = 1300
-
-export const PhoneForSmallScreens = styled(IPhoneX)`
-  @media (min-width: ${`${laptopPhoneSwitchScreenWidth}px`}) {
-    display: none;
-  }
-`
-
 export const MacBookContainer = styled('div')`
   width: 100%;
   display: flex;
@@ -41,10 +33,6 @@ export const MacBookDevice = styled('div')`
     left: 4px;
     border-radius: 30px;
     background: #1e1e1e;
-  }
-
-  @media (max-width: ${`${laptopPhoneSwitchScreenWidth - 1}px`}) {
-    display: none;
   }
 `
 
