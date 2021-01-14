@@ -30,7 +30,8 @@
     "eject": "react-scripts eject",
     "export": "bit export archilton.react-components",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -61,7 +62,7 @@
     "@storybook/addon-essentials": "^6.1.14",
     "@storybook/addon-links": "^6.1.14",
     "@storybook/react": "^6.1.14",
-    "babel-loader": "^8.2.2",
-    "gh-pages": "^3.1.0"
+    "@storybook/storybook-deployer": "^2.8.7",
+    "babel-loader": "^8.2.2"
   }
 }
