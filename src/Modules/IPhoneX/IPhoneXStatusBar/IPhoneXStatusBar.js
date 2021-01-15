@@ -8,6 +8,7 @@ import wifi from './wifi.svg'
 
 const IPhoneXStatusBarContainer = styled('div')`
   background-color: ${(props) => props.statusBGColor};
+  color: ${(props) => props.statusColor};
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -17,7 +18,6 @@ const IPhoneXStatusBarContainer = styled('div')`
 `
 
 const IPhoneXStatusBarItem = styled('div')`
-  color: ${(props) => props.statusColor};
   text-align: center;
   display: flex;
   flex-direction: row;
@@ -34,10 +34,14 @@ const IPhoneXStatusBarIcon = styled('img')`
   padding: 0 1px;
 `
 
-const IPhoneXStatusBar = ({ statusBGColor, statusColor }) => (
+const IPhoneXStatusBar = ({ statusBGColor, statusColor, className }) => (
   <div>
-    <IPhoneXStatusBarContainer statusBGColor={statusBGColor}>
-      <IPhoneXStatusBarItem statusColor={statusColor}>
+    <IPhoneXStatusBarContainer
+      statusBGColor={statusBGColor}
+      statusColor={statusColor}
+      className={className}
+    >
+      <IPhoneXStatusBarItem>
         <Clock ticking interval={1000} />
       </IPhoneXStatusBarItem>
       <IPhoneXStatusBarItem>
@@ -59,4 +63,4 @@ IPhoneXStatusBar.defaultProps = {
   statusColor: '#3a3a3a',
 }
 
-export default IPhoneXStatusBar
+export default React.memo(IPhoneXStatusBar)

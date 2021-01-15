@@ -33,6 +33,8 @@ const IPhoneX = ({
   toolbarWrapper,
   screenWrapper,
   statusBarWrapper,
+  statusBGColor,
+  statusBarColor,
 }) => {
   const smallMobile = useMediaQuery({ maxWidth: 500 })
   return (
@@ -55,7 +57,11 @@ const IPhoneX = ({
           </IPhoneXOverflow>
           <IPhoneXInnerShadow />
           <IPhoneXScreen className={screenWrapper}>
-            <IPhoneXStatusBar className={statusBarWrapper} />
+            <IPhoneXStatusBar
+              className={statusBarWrapper}
+              statusBGColor={statusBGColor}
+              statusColor={statusBarColor}
+            />
             {toolbar && (
               <IPhoneXToolbar
                 centerChildren={toolbarTitle}
@@ -90,6 +96,8 @@ IPhoneX.propTypes = {
   toolbarWrapper: PropTypes.string,
   screenWrapper: PropTypes.string,
   statusBarWrapper: PropTypes.string,
+  statusBGColor: PropTypes.string,
+  statusBarColor: PropTypes.string,
 }
 
 IPhoneX.defaultProps = {
@@ -101,6 +109,8 @@ IPhoneX.defaultProps = {
   toolbarWrapper: null,
   screenWrapper: null,
   statusBarWrapper: null,
+  statusBarColor: undefined,
+  statusBGColor: undefined,
 }
 
-export default IPhoneX
+export default React.memo(IPhoneX)
