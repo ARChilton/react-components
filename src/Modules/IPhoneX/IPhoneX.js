@@ -32,6 +32,7 @@ const IPhoneX = ({
   toolbar,
   toolbarWrapper,
   screenWrapper,
+  statusBarWrapper,
 }) => {
   const smallMobile = useMediaQuery({ maxWidth: 500 })
   return (
@@ -54,7 +55,7 @@ const IPhoneX = ({
           </IPhoneXOverflow>
           <IPhoneXInnerShadow />
           <IPhoneXScreen className={screenWrapper}>
-            <IPhoneXStatusBar />
+            <IPhoneXStatusBar className={statusBarWrapper} />
             {toolbar && (
               <IPhoneXToolbar
                 centerChildren={toolbarTitle}
@@ -88,6 +89,7 @@ IPhoneX.propTypes = {
   toolbar: PropTypes.bool,
   toolbarWrapper: PropTypes.string,
   screenWrapper: PropTypes.string,
+  statusBarWrapper: PropTypes.string,
 }
 
 IPhoneX.defaultProps = {
@@ -98,6 +100,7 @@ IPhoneX.defaultProps = {
   toolbar: false,
   toolbarWrapper: null,
   screenWrapper: null,
+  statusBarWrapper: null,
 }
 
 export default IPhoneX
