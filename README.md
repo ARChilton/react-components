@@ -70,6 +70,6 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 ### Bit commands
 
 - bit build
-- bit tag --all version
+- bit tag --all <versionNumber>
 - bit status
 - bit export
