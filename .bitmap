@@ -86,9 +86,44 @@
     "archilton.react-components/components@1.2.0": {
         "files": [
             {
+                "relativePath": "src/Components/GraphPaper/GraphPaper.stories.jsx",
+                "test": false,
+                "name": "GraphPaper.stories.jsx"
+            },
+            {
                 "relativePath": "src/Components/Text/Text.js",
                 "test": false,
                 "name": "Text.js"
+            },
+            {
+                "relativePath": "src/Components/WorkFlow.zip",
+                "test": false,
+                "name": "WorkFlow.zip"
+            },
+            {
+                "relativePath": "src/Components/WorkFlow/Workflow.stories.tsx",
+                "test": false,
+                "name": "Workflow.stories.tsx"
+            },
+            {
+                "relativePath": "src/Components/WorkFlow/Workflow.tsx",
+                "test": false,
+                "name": "Workflow.tsx"
+            },
+            {
+                "relativePath": "src/Components/WorkFlow/WorlflowStepInner.tsx",
+                "test": false,
+                "name": "WorlflowStepInner.tsx"
+            },
+            {
+                "relativePath": "src/Components/WorkFlow/partials/WorkflowContainer.tsx",
+                "test": false,
+                "name": "WorkflowContainer.tsx"
+            },
+            {
+                "relativePath": "src/Components/WorkFlow/partials/WorkflowStep.tsx",
+                "test": false,
+                "name": "WorkflowStep.tsx"
             }
         ],
         "mainFile": "src/Components/Text/Text.js",
